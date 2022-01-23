@@ -2,14 +2,18 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 polybar example &
-picom &
-feh --bg-fill ~/Downloads/10us9paizqc51.jpg  &
-xrandr --output DP-0 --rate 75
+feh --bg-fill ~/.wallpapers/archnord.png  &
+xrandr --output DP-0 --rate 75 &
+xsetroot -cursor_name left_ptr &
+mullvad-vpn &
+element-desktop &
+keepassxc &
+librewolf &
+#sudo mount /dev/sda1 /home/jude/2nd_Drive
 
 
-
-bspc monitor DP-0 -d 1 2 3 4 5 6 7 8 9 10
-bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+#bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9 10
 bspc config border_width         2
 bspc config window_gap          12
 
@@ -18,9 +22,12 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 #bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
-
-xsetroot -cursor_name left_ptr &
+bspc rule -a LibreWolf desktop='^1'                                                                                                                                                                                                       
+bspc rule -a Element desktop='^3'                                                                                                                                                                                                         
+bspc rule -a "Discord" desktop='^2'                                                                                                                                                                                                       
+bspc rule -a KeePassXC desktop='^4'                                                                                                                                                                                                       
+bspc rule -a "Mullvad VPN" desktop='^5'                                                                                                                                                                                                   
+                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                          
+bspc rule -a Kupfer.py focus=on                                                                                                                                                                                                           
+bspc rule -a Screenkey manage=off  
